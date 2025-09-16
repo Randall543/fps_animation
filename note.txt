@@ -1,0 +1,9 @@
+9/15/25
+This is a simple project to understand how fps and animation works. So something simple is sufficient to present this.
+
+I just want something that can take my assests and play them in in a loop in various fps.
+
+fps
+	15 
+	30
+	60
