@@ -1,2 +1,3 @@
-SDL3-3.2.22 
-SDL3-3.2.22.tar.gz
+SDL3*
+installs/
+target/

@@ -7,3 +7,30 @@ fps
 	15 
 	30
 	60
+
+9/17/25
+so for today and yesterday, I've learned a lot about the build tools make and cmake. Their really handy but confusing at first.
+	* make is the actual build tool; cmake is the build file generator. Cmake uses Cmakelist.txt to produce makefiles (or other files for other build tools like ninja). Then you use that resulting makefile to use make to produce the library or executable needed. 
+	
+	* cmake can produce files, but it also provides an agnostic cli to the underlying build tools like make. You can make the same commands by using the direct tools but cmake makes it easier to have something agnostic.
+	
+	* cmake -S <source_dir_containing_cmake_config> -B <where to place generated files> <optional flags>
+	
+	* cmake --build build <----> make		<--- equivalent commands (kinda) that produce the resulting files
+	
+	* cmake --install build <----> make install <prefix location> (something like that, double check) <--- equivalent commands (kinda) where to place the final, clean result for programs to use or executable to be placed.
+	
+	* you can create the build directory (where you build the builder files and build the project) in the library directory. This keeps things together.
+
+	* after creating the build directory and building the project, then you can install the project into a seperate, centralized directory. I call it install. This centralized a lot of outputs from multiple libraries & makes life easier.
+
+	example (general, not catch all):
+	1) get project via git or download
+	2) cd into project
+	3) run command "cmake -S <location of cmake config> -B build"
+	4) run command "cmake --build build --parallel <whatever number of cores you want or have>"
+	5) run command "cmake --install build --prefix <location of centrallized install file>"
+	6) rinse and repeat for other projects
+
+	if done, then get to coding & linking!
+
