@@ -1,0 +1,2 @@
+gcc src/hello.c -Iinstalls/include/ -L installs/lib/ -o target/app -lSDL3 -lSDL3_image
+LD_LIBRARY_PATH=installs/lib ./target/app
