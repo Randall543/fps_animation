@@ -47,3 +47,8 @@ so for today and yesterday, I've learned a lot about the build tools make and cm
 	cmake --install <dir>	-> this is meant for deployment and why it's a seperate command for this is meant to installed, shared, or deployed to an environment.
 
 	Now that this is done, I can work with the library and move on with the idea.
+
+10/14/25
+	after soom reading and googling, it turns out the reason the code wasn't running was because I was using it incorrectly. The callbacks is for an agnostic implementation of the framework so it can work in whatever OS it was operating on. The other way is more explicity and I handle the main function directly. To get the example running, the explicit call to main was the way to go since it was more intuitive and explicit. For the sake of learning the basics, thats enough for me.
+
+	This is still a demo so i understand how the framework functions and move forward.
