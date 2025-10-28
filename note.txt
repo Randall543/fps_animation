@@ -52,3 +52,15 @@ so for today and yesterday, I've learned a lot about the build tools make and cm
 	after soom reading and googling, it turns out the reason the code wasn't running was because I was using it incorrectly. The callbacks is for an agnostic implementation of the framework so it can work in whatever OS it was operating on. The other way is more explicity and I handle the main function directly. To get the example running, the explicit call to main was the way to go since it was more intuitive and explicit. For the sake of learning the basics, thats enough for me.
 
 	This is still a demo so i understand how the framework functions and move forward.
+
+10/27/25
+	ok, I'm working from my laptop now. I've done a good amount of reading about the gpu, general graphics pipeline, and the windowing system libraries. (I've studied a bit more about networks but that's a different topic for something else) I wanted to make note of the dependencies I needed to fix my issues here on the laptop. Overall, I think I just needed to install the command, pkg-config, since cmake files couldn't find certain libraries I've definitly installed prior. It's still good to record the shell command that fixed my issue. 
+
+		sudo apt-get install build-essential git make \
+	pkg-config cmake ninja-build gnome-desktop-testing libasound2-dev libpulse-dev \
+	libaudio-dev libfribidi-dev libjack-dev libsndio-dev libx11-dev libxext-dev \
+	libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxtst-dev \
+	libxkbcommon-dev libdrm-dev libgbm-dev libgl1-mesa-dev libgles2-mesa-dev \
+	libegl1-mesa-dev libdbus-1-dev libibus-1.0-dev libudev-dev
+
+	FYI -> the error message produced my the cmake files gave me the link that provided me this command!
